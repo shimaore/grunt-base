@@ -7,7 +7,7 @@ Browser main
     fun = (x) -> "(#{x})"
 
     base = "#{window.location.protocol}//#{window.location.host}"
-    db_path = config.db_path ? "#{base}/#{window.location.pathname.split('/')[1]}"
+    db_path = cfg.db_path ? "#{base}/#{window.location.pathname.split('/')[1]}"
 
 Tools
 
@@ -37,7 +37,7 @@ Socket.IO
 
     ###
     io = require 'socket.io-client'
-    socket = io config.io ? base
+    socket = io cfg.io ? base
     ###
 
 Ampersand
